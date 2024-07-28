@@ -106,7 +106,7 @@ store.dispatch(incrementCounter())
 store.dispatch(decrementCounter())
 store.dispatch(decrementCounter())
 store.dispatch(decrementCounter())
-
+unsubscribe()
 store.dispatch(incrementSells())
 store.dispatch(incrementSells())
 store.dispatch(incrementSells())
