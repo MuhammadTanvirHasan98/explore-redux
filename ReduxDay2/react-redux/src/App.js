@@ -3,6 +3,7 @@ import CakeContainer from './Components/CakeContainer';
 import {Provider} from 'react-redux';
 import store from './Redux/store';
 import BurgerContainer from './Components/BurgerContainer';
+import UsersContainer from './Components/UsersContainer';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
        <CakeContainer/>
        <BurgerContainer/>
+       <UsersContainer/>
     </div>
     </Provider>
   );

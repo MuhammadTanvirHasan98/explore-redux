@@ -1,15 +1,12 @@
-import { createStore , applyMiddleware} from 'redux'
-import cakeReducer from './Cakes/cakeReducer'
-import burgerReducer from './Burger/burgerReducer';
-import {combineReducers} from 'redux'
-import logger from 'redux-logger'
+import { createStore, applyMiddleware, compose } from "redux";
+import { thunk } from "redux-thunk"
+// import logger from "redux-logger";
+import rootReducer from "./rootReducer";
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
-const rootReducer = combineReducers({
-  cake: cakeReducer,
-  burger: burgerReducer
-})
 
-const store = createStore(rootReducer, applyMiddleware(logger))
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)));
 
 export default store;
