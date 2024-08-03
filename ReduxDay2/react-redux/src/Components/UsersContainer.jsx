@@ -13,7 +13,7 @@ const UsersContainer = () => {
 
   return <>
     {loading ? <h1 style={{color:'blue'}}>Loading.....</h1> : error ?  <p>This error occurs: <span style={{color:'red'}}>{error}</span> </p>: <div>
-      
+      <h1>All Users: {users.length}</h1>
       {
         users.map(user=>(
           <div key={user?.id}>
